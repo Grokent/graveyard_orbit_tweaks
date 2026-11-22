@@ -18,23 +18,22 @@ REQUIREMENTS
 
 INSTALL (SAME ON WINDOWS AND LINUX)
   1. Close Graveyard Orbit.
-  2. Open the Graveyard Orbit game folder (the one containing
-     GraveyardOrbit.exe):
-       Steam > right-click Graveyard Orbit > Manage > Browse local files
-     On Linux the default path is:
-       ~/.local/share/Steam/steamapps/common/Graveyard Orbit
-  3. Extract EVERYTHING from this zip into that folder. It only adds files;
-     nothing in the original game is replaced:
+  2. In Steam, right-click Graveyard Orbit > Manage > Browse local files.
+     That opens the game folder (the one containing GraveyardOrbit.exe).
+  3. Download the release zip:
+       https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.1.0.zip
+  4. Extract EVERYTHING from the zip into the game folder that opened in step 2.
+     It only adds files; nothing in the original game is replaced:
        winhttp.dll
        doorstop_config.ini
        .doorstop_version
        changelog.txt
        BepInEx/...
-  4. Linux / Steam Deck (Proton) ONLY: add this launch option once
+  5. Linux / Steam Deck (Proton) ONLY: add this launch option once
      (game > Properties > Launch Options):
        WINEDLLOVERRIDES="winhttp=n,b" %command%
      Windows needs no launch options.
-  5. Launch the game through Steam normally.
+  6. Launch the game through Steam normally.
 
 CHANGES
   Drone prices and repairs

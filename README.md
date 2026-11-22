@@ -16,16 +16,15 @@ mod for private play. No game code or game asset files are redistributed here.
 
 You only need the release zip — no compiler, no setup, no separate Linux build.
 
-1. Download the latest `GraveyardOrbit-Tweaks-*.zip` from the
-   [`release/`](release) folder (or the repository's Releases page).
-2. Close Graveyard Orbit.
-3. Open the Graveyard Orbit game folder:
-   - **Windows:** Steam → right-click *Graveyard Orbit* → *Manage* → *Browse local files*
-   - **Linux / Steam Deck:** same Steam menu, or
-     `~/.local/share/Steam/steamapps/common/Graveyard Orbit`
-4. Extract **everything** from the zip into that folder. It only adds files
-   (`winhttp.dll`, `doorstop_config.ini`, `.doorstop_version`, `changelog.txt`,
-   `BepInEx/`); nothing in the original game is replaced.
+1. Close Graveyard Orbit.
+2. In Steam, right-click **Graveyard Orbit** → **Manage** → **Browse local files**.
+   That opens the game folder (the one containing `GraveyardOrbit.exe`).
+3. Download the release zip:
+   **[GraveyardOrbit-Tweaks-0.1.0.zip](https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.1.0.zip)**
+4. Extract **everything** from the zip into the game folder that opened in step 2.
+   It only adds files (`winhttp.dll`, `doorstop_config.ini`,
+   `.doorstop_version`, `changelog.txt`, `BepInEx/`); nothing in the original
+   game is replaced.
 5. **Linux / Proton only:** add this launch option once (game → Properties →
    Launch Options). Windows needs no launch options:
 
