@@ -2,8 +2,9 @@
 
 This repository contains only the Graveyard Orbit Tweaks plugin's own source
 code. No game files or third-party binaries are committed here. The build
-output (`dist/`) and project-local toolchain (`tools/dotnet`, `tools/BepInEx`)
-are gitignored.
+output (`release/stage/`) and project-local toolchain (`tools/dotnet`,
+`tools/BepInEx`) are gitignored. The finished install zip in `release/` is
+committed and attached to the GitHub release.
 
 The redistributable ZIP produced by `package.sh` bundles the BepInEx mod loader
 and its runtime dependencies:
@@ -36,5 +37,5 @@ are available at the link above.
 
 ---
 
-This is an unofficial fan mod. Graveyard Orbit and its assets belong to
-Anchorhead Games.
+This is an unofficial, AI-generated fan mod. Graveyard Orbit and its assets
+belong to Anchorhead Games.

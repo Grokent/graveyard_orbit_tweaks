@@ -38,12 +38,14 @@ the co-op mod; both can be installed together.
 ./setup.sh     # portable .NET 9 SDK + BepInEx compile refs (project-local)
 ./build.sh
 ./deploy.sh    # -> BepInEx/plugins/GraveyardOrbit.Tweaks/
-./package.sh   # dist/GraveyardOrbit-Tweaks-0.1.0-win64.zip
+./package.sh   # release/GraveyardOrbit-Tweaks-0.1.0.zip (committed + GitHub release)
 ```
 
 - `build.sh` prefers `tools/dotnet`, then falls back to the co-op project's
   portable SDK.
 - No dependency on the co-op plugin; no shared state.
+- `release/` holds the install zip that is committed and attached to the
+  GitHub release; version tags use the `v<version>` form.
 
 ## Gotchas
 
@@ -74,5 +76,7 @@ the co-op mod; both can be installed together.
 
 - Keep patches defensive (try/catch, no exceptions into gameplay).
 - Bump `PluginVersion` in `TweaksPlugin.cs` when shipping.
-- Commit/push to the repo when asked; keep `dist/`, `tools/`, `bin/obj`
-  gitignored.
+- Commit/push to the repo when asked; keep `dist/`, `release/stage/`,
+  `tools/`, `bin/obj` gitignored.
+- README/INSTALL must carry the AI-use disclaimer (100% vibe coded, no
+  ownership claims, rights to Anchorhead Games).
