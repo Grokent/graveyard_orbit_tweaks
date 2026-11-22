@@ -117,9 +117,12 @@ committed.
 
 ```
 src/GraveyardOrbit.Tweaks/   plugin source
-release/                     redistributable install zip
 licenses/                    third-party license texts shipped in the zip
 ```
+
+`release/` is a local packaging output (gitignored); install zips are attached to
+the repository's [Releases](https://github.com/Grokent/graveyard_orbit_tweaks/releases)
+page.
 
 ## License and credits
 

@@ -13,6 +13,12 @@
     <NoWarn>CS0649;CS0169</NoWarn>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <!-- Do not embed local source paths in the shipped DLL. -->
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
   <PropertyGroup>
     <GameDir Condition="'$(GameDir)' == ''">$(HOME)/.local/share/Steam/steamapps/common/Graveyard Orbit</GameDir>
     <GameManaged>$(GameDir)/GraveyardOrbit_Data/Managed</GameManaged>

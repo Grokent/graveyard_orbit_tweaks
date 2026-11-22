@@ -44,8 +44,8 @@ the co-op mod; both can be installed together.
 - `build.sh` prefers `tools/dotnet`, then falls back to the co-op project's
   portable SDK.
 - No dependency on the co-op plugin; no shared state.
-- `release/` holds the install zip that is committed and attached to the
-  GitHub release; version tags use the `v<version>` form.
+- `release/` is a local package output (gitignored); install zips are attached
+  to GitHub releases, and version tags use the `v<version>` form.
 
 ## Gotchas
 
@@ -76,7 +76,7 @@ the co-op mod; both can be installed together.
 
 - Keep patches defensive (try/catch, no exceptions into gameplay).
 - Bump `PluginVersion` in `TweaksPlugin.cs` when shipping.
-- Commit/push to the repo when asked; keep `dist/`, `release/stage/`,
-  `tools/`, `bin/obj` gitignored.
+- Commit/push to the repo when asked; keep `dist/`, `release/`, `tools/`,
+  `bin/obj` gitignored.
 - README/INSTALL must carry the AI-use disclaimer (100% vibe coded, no
   ownership claims, rights to Anchorhead Games).

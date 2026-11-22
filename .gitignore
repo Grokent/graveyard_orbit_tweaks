@@ -4,6 +4,6 @@ tools/*.zip
 src/**/bin/
 src/**/obj/
 dist/
-release/stage/
+release/
 *.user
 .DS_Store

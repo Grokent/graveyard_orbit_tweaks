@@ -2,9 +2,9 @@
 
 This repository contains only the Graveyard Orbit Tweaks plugin's own source
 code. No game files or third-party binaries are committed here. The build
-output (`release/stage/`) and project-local toolchain (`tools/dotnet`,
-`tools/BepInEx`) are gitignored. The finished install zip in `release/` is
-committed and attached to the GitHub release.
+output (`release/`) and project-local toolchain (`tools/dotnet`,
+`tools/BepInEx`) are gitignored. The finished install zip is attached to the
+GitHub release.
 
 The redistributable ZIP produced by `package.sh` bundles the BepInEx mod loader
 and its runtime dependencies:
