@@ -1,0 +1,8 @@
+tools/dotnet/
+tools/BepInEx/
+tools/*.zip
+src/**/bin/
+src/**/obj/
+dist/
+*.user
+.DS_Store

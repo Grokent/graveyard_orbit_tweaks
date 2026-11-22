@@ -1,0 +1,27 @@
+# Graveyard Orbit Tweaks
+
+Separate BepInEx plugin (does not require the co-op mod).
+
+## Changes
+
+- **Drone prices halved** — Miner / Hauler / Seeker base price and every upgrade
+  level cost are cut 50% (including progression scaling).
+- **Drone repair: $100** (was $300).
+- **Igniter upgrade levels 2 and 3**:
+  - Level 2: 4.5 rocks/s, costs **$200**
+  - Level 3: 6 rocks/s, costs **$350**
+
+## Build & install
+
+```bash
+./build.sh
+./deploy.sh
+```
+
+`deploy.sh` adds BepInEx if missing and copies only the plugin DLL into
+`BepInEx/plugins/GraveyardOrbit.Tweaks/`. No game files are modified.
+
+## Uninstall
+
+Delete `BepInEx/plugins/GraveyardOrbit.Tweaks/` (plus the BepInEx files if you
+do not use any other mod).
