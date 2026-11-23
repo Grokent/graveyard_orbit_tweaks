@@ -20,7 +20,7 @@ You only need the release zip — no compiler, no setup, no separate Linux build
 2. In Steam, right-click **Graveyard Orbit** → **Manage** → **Browse local files**.
    That opens the game folder (the one containing `GraveyardOrbit.exe`).
 3. Download the release zip:
-   **[GraveyardOrbit-Tweaks-0.1.1.zip](https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.1.1.zip)**
+   **[GraveyardOrbit-Tweaks-0.2.0.zip](https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.2.0.zip)**
 4. Extract **everything** from the zip into the game folder that opened in step 2.
    It only adds files (`winhttp.dll`, `doorstop_config.ini`,
    `.doorstop_version`, `changelog.txt`, `BepInEx/`); nothing in the original
@@ -85,6 +85,13 @@ same kind of throughput gain — and gives the igniter a progression path instea
 of being a one-and-done purchase. The card maxes at level 3. The upgraded rate
 is applied to the live belt simulation, and the machine card reports the current
 rock-per-second rate.
+
+### Dual-colour sorters
+
+Sorters can now hold two colours at no extra cost. Click a colour key to add
+it, and click it again to remove it. The sorter icon splits diagonally:
+upper-left is the primary colour, lower-right is the secondary colour. Both
+colours route down that lane. Existing one-colour sorters are unchanged.
 
 ### Future tweaks
 

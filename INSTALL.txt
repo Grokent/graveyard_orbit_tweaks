@@ -1,4 +1,4 @@
-GRAVEYARD ORBIT TWEAKS (0.1.1)
+GRAVEYARD ORBIT TWEAKS (0.2.0)
 =============================
 
 WHAT THIS IS
@@ -21,7 +21,7 @@ INSTALL (SAME ON WINDOWS AND LINUX)
   2. In Steam, right-click Graveyard Orbit > Manage > Browse local files.
      That opens the game folder (the one containing GraveyardOrbit.exe).
   3. Download the release zip:
-       https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.1.1.zip
+       https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.2.0.zip
   4. Extract EVERYTHING from the zip into the game folder that opened in step 2.
      It only adds files; nothing in the original game is replaced:
        winhttp.dll
@@ -63,6 +63,13 @@ CHANGES
     Reasoning: the press already upgrades at $180 and $300, while the igniter
     stopped at level 1. $200 / $350 keeps the igniter in line with the press
     curve and gives it a real progression path.
+
+  Dual-colour sorters
+    - Each sorter can hold two colours at no extra cost.
+    - Click a colour key to add it; click it again to remove it.
+    - Both colours route down the sorter's lane.
+    - The sorter icon splits diagonally: upper-left primary, lower-right
+      secondary.
 
   Future tweaks
     - Add an upgrade path for the Kickback (internally MachineKind.Rebate), the
