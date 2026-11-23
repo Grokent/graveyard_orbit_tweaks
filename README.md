@@ -20,7 +20,7 @@ You only need the release zip — no compiler, no setup, no separate Linux build
 2. In Steam, right-click **Graveyard Orbit** → **Manage** → **Browse local files**.
    That opens the game folder (the one containing `GraveyardOrbit.exe`).
 3. Download the release zip:
-   **[GraveyardOrbit-Tweaks-0.2.0.zip](https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.2.0.zip)**
+   **[GraveyardOrbit-Tweaks-0.3.0.zip](https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.3.0.zip)**
 4. Extract **everything** from the zip into the game folder that opened in step 2.
    It only adds files (`winhttp.dll`, `doorstop_config.ini`,
    `.doorstop_version`, `changelog.txt`, `BepInEx/`); nothing in the original
@@ -92,6 +92,23 @@ Sorters can now hold two colours at no extra cost. Click a colour key to add
 it, and click it again to remove it. The sorter icon splits diagonally:
 upper-left is the primary colour, lower-right is the secondary colour. Both
 colours route down that lane. Existing one-colour sorters are unchanged.
+
+### Miner scrap shard refunds
+
+Scrapping a drone now refunds the colour shards spent unlocking Miner
+specialisations, in addition to the normal money refund. A Miner with Gold and
+Blue unlocked returns 4 Gold-family shards and 4 Blue-family shards. The scrap
+result message lists exactly what was returned. Plain miners with no colour
+specs are unaffected.
+
+### Shipyard BUY ALL
+
+The simple shipyard upgrade view now has a **BUY ALL** slab row above the
+upgrade menu. It buys the cheapest available part upgrades first, upgrades the
+lowest-level energy drive when an upgrade is blocked by the energy cap, and
+falls back to magnet/boost upgrades when blocked or when only leftover money
+remains. It stops when nothing affordable and legal remains, plays one buy
+sound, and shows no summary message.
 
 ### Future tweaks
 

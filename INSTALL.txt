@@ -1,4 +1,4 @@
-GRAVEYARD ORBIT TWEAKS (0.2.0)
+GRAVEYARD ORBIT TWEAKS (0.3.0)
 =============================
 
 WHAT THIS IS
@@ -21,7 +21,7 @@ INSTALL (SAME ON WINDOWS AND LINUX)
   2. In Steam, right-click Graveyard Orbit > Manage > Browse local files.
      That opens the game folder (the one containing GraveyardOrbit.exe).
   3. Download the release zip:
-       https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.2.0.zip
+       https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.3.0.zip
   4. Extract EVERYTHING from the zip into the game folder that opened in step 2.
      It only adds files; nothing in the original game is replaced:
        winhttp.dll
@@ -70,6 +70,19 @@ CHANGES
     - Both colours route down the sorter's lane.
     - The sorter icon splits diagonally: upper-left primary, lower-right
       secondary.
+
+  Miner scrap shard refunds
+    - Scrapping a drone refunds the colour shards spent on Miner colour specs.
+    - The normal money refund is unchanged.
+    - The scrap result message lists the returned shards.
+
+  Shipyard BUY ALL
+    - Simple upgrade view gets a BUY ALL row above the upgrade menu.
+    - Buys cheapest part upgrades first.
+    - Upgrades the lowest-level drive when an upgrade is energy-blocked.
+    - Falls back to magnet/boost upgrades when blocked or when only leftover
+      money remains.
+    - No summary message; one buy sound.
 
   Future tweaks
     - Add an upgrade path for the Kickback (internally MachineKind.Rebate), the

@@ -9,7 +9,7 @@ namespace GraveyardOrbit.Tweaks
     public sealed class TweaksPlugin : BaseUnityPlugin
     {
         public const string PluginGuid = "agentbox.graveyardorbit.tweaks";
-        public const string PluginVersion = "0.2.0";
+        public const string PluginVersion = "0.3.0";
 
         internal static ManualLogSource Log;
 
@@ -26,6 +26,8 @@ namespace GraveyardOrbit.Tweaks
                 Log.LogInfo("  drones: buy/upgrade prices halved, repair = $100");
                 Log.LogInfo("  igniter: levels 2 and 3 (4.5 / 6 rocks/s) for $200 / $350");
                 Log.LogInfo("  sorter: two colours per sorter (no extra cost)");
+                Log.LogInfo("  scrap: refunds shards spent on miner colour specs");
+                Log.LogInfo("  shipyard: BUY ALL button in the simple helper view");
             }
             catch (Exception ex)
             {
