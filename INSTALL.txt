@@ -1,10 +1,12 @@
-GRAVEYARD ORBIT TWEAKS (0.3.0)
+GRAVEYARD ORBIT TWEAKS (0.4.0)
 =============================
 
 WHAT THIS IS
-  A standalone BepInEx plugin with balance changes for Graveyard Orbit:
-  cheaper drones, cheaper repairs, and an upgrade path for the Igniter.
-  It does not require the co-op mod; both can be installed together.
+  A standalone BepInEx plugin with balance and quality-of-life changes for
+  Graveyard Orbit: cheaper drones and repairs, an upgrade path for the Igniter,
+  dual-colour sorters, Miner scrap shard refunds, shipyard BUY ALL, and
+  shift+click buy max. It does not require the co-op mod; both can be installed
+  together.
 
 DISCLAIMER
   This mod is 100% vibe coded and 100% the product of AI use. It is an
@@ -21,7 +23,7 @@ INSTALL (SAME ON WINDOWS AND LINUX)
   2. In Steam, right-click Graveyard Orbit > Manage > Browse local files.
      That opens the game folder (the one containing GraveyardOrbit.exe).
   3. Download the release zip:
-       https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.3.0.zip
+       https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.4.0.zip
   4. Extract EVERYTHING from the zip into the game folder that opened in step 2.
      It only adds files; nothing in the original game is replaced:
        winhttp.dll
@@ -83,6 +85,17 @@ CHANGES
     - Falls back to magnet/boost upgrades when blocked or when only leftover
       money remains.
     - No summary message; one buy sound.
+
+  Shipyard shift+click buy max
+    - Shift+left-click an upgrade to buy every level you can currently afford.
+    - Works on the ship grid, the advanced LEVEL UP / UPGRADE key, and the
+      LEVEL UP row in the part info card.
+    - Magnet and boost keys buy max on their own track; shift+clicking the
+      reactor on the grid spends across both tracks, cheapest next level first.
+    - Stops at a max level, an energy/fit block, or the wallet.
+    - Plain click and pad navigation are unchanged.
+    - Shift+click on a maxed or blocked part keeps the vanilla multi-select;
+      shift+drag and marquee selection are unchanged.
 
   Future tweaks
     - Add an upgrade path for the Kickback (internally MachineKind.Rebate), the

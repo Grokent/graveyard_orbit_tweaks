@@ -7,3 +7,4 @@ dist/
 release/
 *.user
 .DS_Store
+thunderstore/dist/

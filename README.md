@@ -1,8 +1,16 @@
 # Graveyard Orbit Tweaks
 
-Standalone BepInEx plugin with balance changes for **Graveyard Orbit**:
-cheaper drones, cheaper repairs, and an upgrade path for the Igniter. It does
-not require the co-op mod, and both can be installed together.
+Standalone BepInEx plugin with balance and quality-of-life changes for
+**Graveyard Orbit**: cheaper drones and repairs, an upgrade path for the
+Igniter, dual-colour sorters, Miner scrap shard refunds, shipyard **BUY ALL**,
+and shift+click buy max. It does not require the co-op mod, and both can be
+installed together.
+
+## Feature previews
+
+| Dual-colour sorters | Igniter upgrades | Shipyard BUY ALL |
+|:---:|:---:|:---:|
+| <img src="docs/images/dual-sorters.webp" width="250" alt="Dual-colour sorters"> | <img src="docs/images/igniter-upgrades.webp" width="250" alt="Igniter upgrades"> | <img src="docs/images/shipyard-buy-all.webp" width="250" alt="Shipyard BUY ALL"> |
 
 ## ⚠️ Disclaimer
 
@@ -20,7 +28,7 @@ You only need the release zip — no compiler, no setup, no separate Linux build
 2. In Steam, right-click **Graveyard Orbit** → **Manage** → **Browse local files**.
    That opens the game folder (the one containing `GraveyardOrbit.exe`).
 3. Download the release zip:
-   **[GraveyardOrbit-Tweaks-0.3.0.zip](https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.3.0.zip)**
+   **[GraveyardOrbit-Tweaks-0.4.0.zip](https://github.com/Grokent/graveyard_orbit_tweaks/releases/latest/download/GraveyardOrbit-Tweaks-0.4.0.zip)**
 4. Extract **everything** from the zip into the game folder that opened in step 2.
    It only adds files (`winhttp.dll`, `doorstop_config.ini`,
    `.doorstop_version`, `changelog.txt`, `BepInEx/`); nothing in the original
@@ -109,6 +117,21 @@ lowest-level energy drive when an upgrade is blocked by the energy cap, and
 falls back to magnet/boost upgrades when blocked or when only leftover money
 remains. It stops when nothing affordable and legal remains, plays one buy
 sound, and shows no summary message.
+
+### Shipyard shift+click buy max
+
+Shift+left-click a shipyard upgrade to buy every level you can currently
+afford:
+
+- a weapon, cargo hold or energy drive on the ship grid,
+- its LEVEL UP / UPGRADE key in the advanced upgrades column,
+- or the `LEVEL UP` row in the part info card.
+
+The reactor's magnet and boost tracks buy max independently from their keys,
+and shift+clicking the reactor on the grid spends across both tracks
+(cheapest next level first). The buy stops at a max level, an energy/fit
+block, or the wallet. Shift+click on a maxed or blocked part keeps the
+vanilla multi-select behaviour; shift+drag and marquee selection are unchanged.
 
 ### Future tweaks
 

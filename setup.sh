@@ -9,11 +9,11 @@ if [[ ! -x "$ROOT/tools/dotnet/dotnet" ]]; then
 fi
 
 if [[ ! -f "$ROOT/tools/BepInEx/BepInEx/core/BepInEx.dll" ]]; then
-  echo "Downloading BepInEx 5.4.23.6 for compile references ..."
+  echo "Downloading BepInEx 5.4.23.5 for compile references ..."
   mkdir -p "$ROOT/tools"
-  curl -sSL -o "$ROOT/tools/BepInEx_win_x64_5.4.23.6.zip" \
-    https://github.com/BepInEx/BepInEx/releases/download/v5.4.23.6/BepInEx_win_x64_5.4.23.6.zip
-  unzip -oq "$ROOT/tools/BepInEx_win_x64_5.4.23.6.zip" -d "$ROOT/tools/BepInEx"
+  curl -sSL -o "$ROOT/tools/BepInEx_win_x64_5.4.23.5.zip" \
+    https://github.com/BepInEx/BepInEx/releases/download/v5.4.23.5/BepInEx_win_x64_5.4.23.5.zip
+  unzip -oq "$ROOT/tools/BepInEx_win_x64_5.4.23.5.zip" -d "$ROOT/tools/BepInEx"
 fi
 
 echo

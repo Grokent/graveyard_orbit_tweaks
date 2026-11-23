@@ -1,0 +1,27 @@
+# Thunderstore packaging config.
+# One repository can produce several packages; each [[package]] is one listing.
+# Docs: /home/jason/Projects/agent/Thunderstore/README.md
+
+[defaults]
+namespace = "Grokent"
+community = "graveyard-orbit"
+icon = "thunderstore/icon.png"
+readme = "thunderstore/README.md"
+changelog = "thunderstore/CHANGELOG.md"
+nsfw = false
+
+[defaults.version]
+file = "src/GraveyardOrbit.Tweaks/TweaksPlugin.cs"
+regex = 'PluginVersion\s*=\s*"([0-9]+\.[0-9]+\.[0-9]+)"'
+
+# When Tweaks is split into piecemeal mods, add one [[package]] per tweak here
+# and point each at its own build output. The tool already supports it.
+[[package]]
+name = "Orbit_Tweaks"
+description = "Balance tweaks: cheaper drones and repairs, Igniter levels 2-3, two colours per sorter, scrap refunds, a BUY ALL shipyard button and shift+click buy max."
+website_url = "https://github.com/Grokent/graveyard_orbit_tweaks"
+categories = ["mods", "tweaks"]
+dependencies = ["BepInEx-BepInExPack-5.4.2305"]
+
+[package.payload]
+"src/GraveyardOrbit.Tweaks/bin/Release/GraveyardOrbit.Tweaks.dll" = "BepInEx/plugins/GraveyardOrbit.Tweaks/"

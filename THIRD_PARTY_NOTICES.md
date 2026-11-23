@@ -9,12 +9,12 @@ GitHub release.
 The redistributable ZIP produced by `package.sh` bundles the BepInEx mod loader
 and its runtime dependencies:
 
-## BepInEx 5.4.23.6 - LGPL-2.1
+## BepInEx 5.4.23.5 - LGPL-2.1
 
 - Project: https://github.com/BepInEx/BepInEx
 - License: GNU Lesser General Public License v2.1
 - Full text: [`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt)
-- Source for the shipped binaries: https://github.com/BepInEx/BepInEx/tree/v5.4.23.6
+- Source for the shipped binaries: https://github.com/BepInEx/BepInEx/tree/v5.4.23.5
 
 BepInEx is redistributed unmodified as separate DLLs inside the ZIP and is
 loaded dynamically at runtime. The corresponding source and build instructions

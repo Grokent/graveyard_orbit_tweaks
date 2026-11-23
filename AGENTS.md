@@ -26,7 +26,7 @@ the co-op mod; both can be installed together.
 ## Environment
 
 - Linux (CachyOS); game via **Steam/Proton**, AppID **4654120**, Unity
-  **6000.5.0f1**, Mono; BepInEx 5.4.23.6 additive.
+  **6000.5.0f1**, Mono; BepInEx 5.4.23.5 additive.
 - Proton launch option: `WINEDLLOVERRIDES="winhttp=n,b" %command%`.
 - Game path: `~/.local/share/Steam/steamapps/common/Graveyard Orbit`.
 - Reference/decompiled game code for recon lives in the co-op project:
@@ -80,3 +80,22 @@ the co-op mod; both can be installed together.
   `bin/obj` gitignored.
 - README/INSTALL must carry the AI-use disclaimer (100% vibe coded, no
   ownership claims, rights to Anchorhead Games).
+
+## Publishing (Thunderstore)
+
+`package.sh` produces the standalone installer zip for GitHub releases. It is
+**not** a Thunderstore package — do not upload it.
+
+Thunderstore packaging is driven by `thunderstore.toml` from the workspace at
+`~/Projects/agent/Thunderstore`:
+
+```bash
+cd ~/Projects/agent/Thunderstore
+./tspkg.sh build tweaks          # -> <this repo>/thunderstore/dist/
+./tspkg.sh validate tweaks --online
+./tspkg.sh publish tweaks --dry-run
+```
+
+Bump with `./tspkg.sh version tweaks --bump patch`; it rewrites the version in this
+repo, so the plugin, the installer zip and the Thunderstore package stay in
+sync. Listing text lives in `thunderstore/README.md`, not this README.
