@@ -3,7 +3,7 @@
 # payload: extract the zip into the Graveyard Orbit game folder.
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-VERSION="0.1.0"
+VERSION="0.1.1"
 OUT="$ROOT/release"
 STAGE="$OUT/stage"
 ZIP="$OUT/GraveyardOrbit-Tweaks-$VERSION.zip"

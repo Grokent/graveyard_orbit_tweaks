@@ -64,6 +64,58 @@ namespace GraveyardOrbit.Tweaks
             }
         }
 
+        // The live belt simulation hardcodes the igniter delay as 1/3 s in
+        // RefinerySim.Tick; it does not call RefineryLine.RateOf. Retime each
+        // igniter that fired this tick so levels 2 and 3 actually run faster.
+        [HarmonyPatch(typeof(RefinerySim), "Tick")]
+        internal static class SimTickPatch
+        {
+            private static void Postfix(RefinerySim __instance)
+            {
+                float now = __instance.Clock;
+                var machines = __instance.Machines;
+                for (int i = 0; i < machines.Count; i++)
+                {
+                    RefinerySim.MachineStat stat = machines[i];
+                    if (stat?.m != null
+                        && stat.m.kind == MachineKind.Tagger
+                        && stat.lastFire == now)
+                    {
+                        stat.ready = now + 1f / Rate(stat.m.level);
+                    }
+                }
+            }
+        }
+
+        // The machine card hardcodes "3 ROCKS / S" for the igniter as well, so
+        // rebuild that one row from the same rate table used above.
+        [HarmonyPatch(typeof(RefineryScreen), "Numbers")]
+        internal static class NumbersPatch
+        {
+            private static void Postfix(RefineryScreen __instance, Machine m, ref string __result)
+            {
+                if (m == null || m.kind != MachineKind.Tagger) return;
+
+                int haulHits = 0;
+                try
+                {
+                    RefinerySim sim = Traverse.Create(__instance).Field("_sim").GetValue<RefinerySim>();
+                    haulHits = sim?.StatOf(m)?.visitHits ?? 0;
+                }
+                catch
+                {
+                    // Keep the game's own text if the private field changes.
+                    return;
+                }
+
+                __result = Loc.F(
+                    "station.refinery.num_igniter",
+                    "{rate} ROCKS / S · IGNITED {n} THIS HAUL",
+                    ("rate", Rate(m.level).ToString("0.#")),
+                    ("n", haulHits));
+            }
+        }
+
         [HarmonyPatch(typeof(RefineryScreen), nameof(RefineryScreen.State))]
         internal static class LevelCardPatch
         {

@@ -9,7 +9,7 @@ namespace GraveyardOrbit.Tweaks
     public sealed class TweaksPlugin : BaseUnityPlugin
     {
         public const string PluginGuid = "agentbox.graveyardorbit.tweaks";
-        public const string PluginVersion = "0.1.0";
+        public const string PluginVersion = "0.1.1";
 
         internal static ManualLogSource Log;
 
